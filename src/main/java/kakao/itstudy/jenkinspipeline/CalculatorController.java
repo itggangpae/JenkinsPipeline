@@ -12,6 +12,7 @@ public class CalculatorController {
 
     @RequestMapping("/")
     String sum(@RequestParam("a") Integer a, @RequestParam("b") Integer b) {
+        System.out.println("업데이트");
         return String.valueOf(calculator.sum(a, b));
     }
 }
