@@ -22,6 +22,12 @@ pipeline{
                  sh "./gradlew test jacocoTestReport"
             }
         }
+        stage("Gradle Build"){
+            steps{
+               sh "./gradlew clean build"
+            }
+        }
+
         stage("Docker Build"){
             steps{
                 sh "docker build -t jenkinspipeline ."
